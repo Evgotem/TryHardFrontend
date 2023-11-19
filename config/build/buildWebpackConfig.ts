@@ -12,9 +12,9 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
     mode: mode,
     entry: paths.entry,
     output: {
-      filename: "[name].[contenthash].ts",
+      filename: "[name].[contenthash].js",
       path: paths.build,
-      clean: true,
+      clean: true
     },
     plugins: buildPlugins(options),
     module: {
