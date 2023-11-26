@@ -2,7 +2,7 @@
 node_modules/
 
 # Игнорировать директорию dist со сборками проекта
-dist/
+/dist
 
 .idea
 
