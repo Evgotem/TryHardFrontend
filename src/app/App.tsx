@@ -1,7 +1,7 @@
 import './styles/index.scss'
-import {Link} from "react-router-dom";
 import {useTheme} from "app/providers/ThemeProvider";
 import {AppRouter} from "app/providers/router";
+import {Navbar} from "widgets/Navbar";
 
 
 export const App = () => {
@@ -9,12 +9,11 @@ export const App = () => {
 
   return (
     <div className={`app ${theme}`}>
+      <Navbar />
+      <AppRouter />
       <button onClick={toggleTheme}>
         Toggle
       </button>
-      <Link to={'/'}>Главная</Link>
-      <Link to={'/about'}>О сайте</Link>
-      <AppRouter />
     </div>
   );
 };
