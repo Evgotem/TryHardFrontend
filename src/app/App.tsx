@@ -5,15 +5,11 @@ import {Navbar} from "widgets/Navbar";
 
 
 export const App = () => {
-  const {theme, toggleTheme} = useTheme();
+  const {theme} = useTheme();
 
-  return (
-    <div className={`app ${theme}`}>
-      <Navbar />
-      <AppRouter />
-      <button onClick={toggleTheme}>
-        Toggle
-      </button>
-    </div>
-  );
+  return (<div className={`app ${theme}`}>
+      <Navbar/>
+      <AppRouter/>
+
+    </div>);
 };
