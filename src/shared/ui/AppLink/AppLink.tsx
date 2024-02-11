@@ -1,6 +1,6 @@
-import {FC} from 'react';
+import { FC } from 'react';
 import clsx from 'clsx';
-import {Link, LinkProps} from "react-router-dom";
+import { Link, LinkProps } from 'react-router-dom';
 import s from './AppLink.module.scss';
 
 export enum AppLinkTheme {
@@ -14,14 +14,16 @@ interface AppLinkProps extends LinkProps {
 
 export const AppLink: FC<AppLinkProps> = (props) => {
   const {
-          className, children, to, theme = AppLinkTheme.PRIMARY, ...otherProps
-        } = props;
+    className, children, to, theme = AppLinkTheme.PRIMARY, ...otherProps
+  } = props;
 
-  return (<Link
-    className={clsx(s.AppLink, s[theme], className)}
-    to={to}
-    {...otherProps}
-  >
-    {children}
-  </Link>)
+  return (
+    <Link
+      className={clsx(s.AppLink, s[theme], className)}
+      to={to}
+      {...otherProps}
+    >
+      {children}
+    </Link>
+  );
 };
